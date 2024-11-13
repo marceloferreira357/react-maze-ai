@@ -1,6 +1,6 @@
 import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
-import { PathEnum } from "../../common/enums";
+import { pathEnum } from "../../common/enums";
 import { Button } from "../../components";
 
 function StartButton() {
@@ -9,7 +9,7 @@ function StartButton() {
   const handleOnClick = useCallback(
     (event) => {
       event.preventDefault();
-      navigate(PathEnum.MAZE);
+      navigate(pathEnum.MAZE);
     },
     [navigate]
   );
