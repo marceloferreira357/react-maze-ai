@@ -1,11 +1,11 @@
 import { FaGithub } from "react-icons/fa6";
 import { maze } from "../../assets";
-import { Link } from "../../components";
+import { Link, Route } from "../../components";
 import StartButton from "./StartButton";
 
 function Home() {
   return (
-    <div className="relative flex flex-col items-center justify-center w-dvw h-dvh gap-6 px-2">
+    <Route className="relative gap-6 px-2">
       <img src={maze} className="h-1/6" />
       <article className="prose text-center">
         <h1 className="text-lavender-blush">React Maze AI ✨</h1>
@@ -19,7 +19,7 @@ function Home() {
         <FaGithub className="text-xl" />
         <span>marceloferreira357</span>
       </Link>
-    </div>
+    </Route>
   );
 }
 
