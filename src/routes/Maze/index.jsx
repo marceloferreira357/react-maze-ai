@@ -23,14 +23,14 @@ function Maze() {
   return (
     <Route className="gap-4">
       <TrainingBadge status={status} />
-      <Map map={map} setMap={setMap} mapSize={mapSize} />
+      <Map map={map} setMap={setMap} />
       <div className="flex flex-row items-center justify-center gap-4">
         <StartButton />
         <StopButton />
       </div>
       <ResetMapButton />
-      <div className="flex flex-col gap-2">
-        <span className="font-medium">Prediction score</span>
+      <div className="flex flex-col items-center justify-center gap-2">
+        <span className="font-medium">Prediction</span>
         <Directions predictionScore={predictionScore} status={status} />
       </div>
     </Route>
