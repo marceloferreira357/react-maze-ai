@@ -2,6 +2,7 @@ import { useState } from "react";
 import { trainingStatus } from "../../common/enums";
 import { Route } from "../../components";
 import Directions from "./Directions";
+import ItemsPanel from "./ItemsPanel";
 import Map from "./Map";
 import ResetMapButton from "./ResetMapButton";
 import StartButton from "./StartButton";
@@ -23,7 +24,10 @@ function Maze() {
   return (
     <Route className="gap-4">
       <TrainingBadge status={status} />
-      <Map map={map} setMap={setMap} />
+      <div className="flex flex-row items-center justify-center gap-6">
+        <Map map={map} setMap={setMap} />
+        <ItemsPanel />
+      </div>
       <div className="flex flex-row items-center justify-center gap-4">
         <StartButton />
         <StopButton />
